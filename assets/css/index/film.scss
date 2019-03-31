@@ -1,0 +1,79 @@
+@import "./panel.scss";
+
+.f-istyle {
+    width: 1190px;
+    margin-left: 20px;
+    margin-top: 40px;
+
+    dl {
+        @include title(#FC405C,linear-gradient(to right, #FA3C68 3%, #FE464D 100%));
+    }
+
+    .filmbody {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 11px 10px 10px;
+        background-color: #fff;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        box-sizing: border-box;
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+
+        .slider-item-film {
+            .item {
+                width: 100%;
+                height: 100%;
+            };
+            .film-info {
+                height: 100px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0, rgba(29, 45, 55, .8) 99%);
+                .film-score{
+                    font-size: 12px;
+                    color: #fff;
+                    text-align: left;
+                    margin-top: 48px;
+                    padding-left: 10px;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                    b{
+                        font-size: 16px;
+                        color: #FD9827;
+                        font-weight: 500;
+                    };
+                };
+                .film-name{
+                    text-align: left;
+                    color: #fff;
+                    padding-left: 10px;
+                    font-size: 16px;
+                    white-space: nowrap;
+                    width: 6em;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-weight: 500;
+                };
+                .buy-ticket{
+                    background: #FF4949;
+                    border-radius: 100px;
+                    color: #fff;
+                    padding: 2px 12px 3px;
+                    font-size: 14px;
+                    position: relative;
+                    top: -24px;
+                    cursor: pointer;
+                    line-height: 20px;
+                    text-align: center;
+                    float: right;
+                    right: 10px;
+                };
+            }
+        }
+    }
+}
