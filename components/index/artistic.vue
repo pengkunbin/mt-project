@@ -1,10 +1,30 @@
 <template>
   <section class="m-istyle">
-    <Title
-    v-bind:title="title.title" 
-        v-bind:options="title.options" 
-        v-bind:allture="title.allture">
-    </Title>
+
+    
+    <dl @mouseover="over">
+      <dt>有格调</dt>
+      <dd
+        :class="{active:kind === 'all'}"
+        kind="all"
+        keyword="景点">全部</dd>
+      <dd
+        :class="{active:kind === 'part'}"
+        kind="part"
+        keyword="美食">约会聚餐</dd>
+      <dd
+        :class="{active:kind === 'spa'}"
+        kind="spa"
+        keyword="丽人">丽人SPA</dd>
+      <dd
+        :class="{active:kind === 'movie'}"
+        kind="movie"
+        keyword="电影">电影演出</dd>
+      <dd
+        :class="{active:kind === 'travel'}"
+        kind="travel"
+        keyword="旅游">品质出游</dd>
+    </dl>
     <ul class="ibody">
       <li
         v-for="item in cur"
@@ -26,38 +46,9 @@
   </section>
 </template>
 <script>
-import Title from './title.vue' 
 export default {
-  components:{
-    Title
-  },
   data: () => {
     return {
-      title:{
-      title: "有格调",
-      options: [
-        {
-          type: "zero",
-          keyword: "全部"
-        },
-        {
-          type: "part",
-          keyword: "约会聚餐"
-        },
-        {
-          type: "spa",
-          keyword: "丽人SPA"
-        },
-        {
-          type: "movie",
-          keyword: "电影演出"
-        },
-        {
-          type:"travel",
-          keyword:"品质出游"
-        }
-      ],
-    },
       kind: 'all',
       list: {
         all: [{
@@ -66,7 +57,12 @@ export default {
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"
         },{
-          img:"https://p1.meituan.net/msmerchant/a316aecb8e8db3a2dda8e7d7f93137a41454100.jpg@460w_260h_1e_1c",
+          img:"https://p0.meituan.net/bbia/8ad9541b2ed8c694f2eb81bb5de1e68249511.jpg@460w_260h_1e_1c",
+          title:"必胜客（中心书城店）",
+          pos:"【随新享丰盛3人餐A010】1份",
+          price:"249"
+        },{
+          img:"https://p0.meituan.net/msmerchant/262060be31e8eb68e0c979ce11d7f8e63700906.jpg@460w_260h_1e_1c",
           title:"必胜客（中心书城店）",
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"
@@ -76,12 +72,7 @@ export default {
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"
         },{
-          img:"https://p1.meituan.net/msmerchant/a316aecb8e8db3a2dda8e7d7f93137a41454100.jpg@460w_260h_1e_1c",
-          title:"必胜客（中心书城店）",
-          pos:"【随新享丰盛3人餐A010】1份",
-          price:"249"
-        },{
-          img:"https://p1.meituan.net/msmerchant/a316aecb8e8db3a2dda8e7d7f93137a41454100.jpg@460w_260h_1e_1c",
+          img:"https://p0.meituan.net/msmerchant/262060be31e8eb68e0c979ce11d7f8e63700906.jpg@460w_260h_1e_1c",
           title:"必胜客（中心书城店）",
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"
@@ -93,7 +84,7 @@ export default {
         }],
         part: [
           {
-          img:"https://p0.meituan.net/merchantpic/aa71c104353e5a8ed8ba03c376d03e0554748.png@460w_260h_1e_1c",
+          img:"https://p1.meituan.net/msmerchant/6f4d9fcca7728eedb442de747df572e22296104.jpg@460w_260h_1e_1c",
           title:"必胜客（中心书城店）",
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"
@@ -103,7 +94,7 @@ export default {
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"
         },{
-          img:"https://p0.meituan.net/merchantpic/aa71c104353e5a8ed8ba03c376d03e0554748.png@460w_260h_1e_1c",
+          img:"https://p1.meituan.net/msmerchant/6f4d9fcca7728eedb442de747df572e22296104.jpg@460w_260h_1e_1c",
           title:"必胜客（中心书城店）",
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"
@@ -113,7 +104,7 @@ export default {
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"
         },{
-          img:"https://p0.meituan.net/merchantpic/aa71c104353e5a8ed8ba03c376d03e0554748.png@460w_260h_1e_1c",
+          img:"https://p1.meituan.net/msmerchant/6f4d9fcca7728eedb442de747df572e22296104.jpg@460w_260h_1e_1c",
           title:"必胜客（中心书城店）",
           pos:"【随新享丰盛3人餐A010】1份",
           price:"249"

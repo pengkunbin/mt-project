@@ -1,13 +1,18 @@
 <template>
   <section class="f-istyle">
-    <Title 
-        v-bind:title="title.title" 
-        v-bind:options="title.options" 
-        v-bind:allture="title.allture">
-    </Title>
+    <dl @mouseover="over">
+      <dt>猫眼电影</dt>
+      <dd :class="{active:kind === 'hot'}" kind="hot" keyword="正在热映">正在热映</dd>
+      <dd :class="{active:kind === 'about'}" kind="about" keyword="即将上映">即将上映</dd>
+      <dd class="all">
+        <span>全部</span>
+        <span>></span>
+      </dd>
+    </dl>
+
     <article class="filmbody">
       <swiper :options="swiperOption">
-        <swiper-slide v-for="(item,index) in swiper" :key="index" class="slider-item-film">
+        <swiper-slide v-for="(item,index) in cur" :key="index" class="slider-item-film">
           <img :src="item.img" class="item">
           <div class="film-info">
             <p class="film-score">
@@ -26,27 +31,9 @@
   </section>
 </template>
 <script>
-import Title from "./title.vue";
 export default {
-  components: {
-    Title
-  },
   data() {
     return {
-    title:{
-      title: "猫眼电影",
-      options: [
-        {
-          type: "zero",
-          keyword: "正在热映"
-        },
-        {
-          type: "about",
-          keyword: "即将上映"
-        }
-      ],
-    },
-      allture: "true",
       swiperOption: {
         slidesPerView: 5,
         spaceBetween: 20,
@@ -62,7 +49,7 @@ export default {
           prevEl: ".swiper-button-prev"
         }
       },
-      swiper: [
+      list: {hot:[
         {
           img:
             "https://p0.meituan.net/movie/b9784931b6212e633978298fd827142b316254.jpg@267w_371h_1e_1c"
@@ -87,10 +74,46 @@ export default {
           img:
             "https://p0.meituan.net/movie/3a836076b5227ef5a2059d9844a26098517279.jpg@267w_371h_1e_1c"
         }
-      ],
+      ],about:[
+        {
+          img:
+            "https://p0.meituan.net/movie/3a836076b5227ef5a2059d9844a26098517279.jpg@267w_371h_1e_1c"
+        },        {
+          img:
+            "https://p0.meituan.net/movie/5c59da7d7c06aea763fe5d59bdabf173146948.jpg@267w_371h_1e_1c"
+        },
+                {
+          img:
+            "https://p0.meituan.net/movie/b9784931b6212e633978298fd827142b316254.jpg@267w_371h_1e_1c"
+        },
+        {
+          img:
+            "https://p1.meituan.net/movie/c63849c7a9de360a7b192bc322792a111705236.jpg@267w_371h_1e_1c"
+        },
+        {
+          img:
+            "https://p0.meituan.net/movie/210c580200fe1fd5f71efc2cb08049b216821810.jpg@267w_371h_1e_1c"
+        },  
+      ]},
+      kind: "hot"
     };
   },
-  methods: {}
+  computed:{
+      cur: function () {
+        return this.list[this.kind]
+    }
+  },
+  methods: {
+    over: async function(e) {
+      let dom = e.target;
+      let tag = dom.tagName.toLowerCase();
+      let self = this;
+      if (tag === "dd" && dom.getAttribute("class")!=='all') {
+        this.kind = dom.getAttribute("kind");
+        let keyword = dom.getAttribute("keyword");
+      }
+    }
+  }
 };
 </script>
 <style lang="scss">

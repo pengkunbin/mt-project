@@ -8,7 +8,7 @@
           :class="{active:kind === item.type}" >
           {{item.keyword}}
       </dd>
-      <dd class="all" v-show = "alltrue">
+      <dd class="all" v-if = "alltrue">
         <span>全部</span>
         <span>></span>
       </dd>
@@ -25,7 +25,7 @@ export default {
         },
         alltrue:{
             type:String,
-            default:""
+            default:'true'
         },
         title:{
             type:String,

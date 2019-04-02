@@ -1,6 +1,15 @@
-# mt-project
+仿美团首页
+===
+首页展示
+<br>
+<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/header.png">
+<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/index1.png">
+<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/index2.png">
+<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/footer.png">
 
-> My splendiferous Nuxt.js project
+注册页面展示
+<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/register.png">
+
 
 ## Build Setup
 
@@ -19,5 +28,4 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 # mt-project
