@@ -4,7 +4,7 @@
 <br>
 <img  width="900" height="300" src="https://raw.githubusercontent.com/pengkunbin/mt-project/master/gitimg/header.png"><br>
 <img  width="900" height="300" src="https://raw.githubusercontent.com/pengkunbin/mt-project/master/gitimg/index1.png"><br>
-<img  width="900" height="300" src="https://raw.githubusercontent.com/pengkunbin/mt-project/master/gitimg/index2.png"><br>
+<img  width="900" height="200" src="https://raw.githubusercontent.com/pengkunbin/mt-project/master/gitimg/index2.png"><br>
 <img  width="900" height="300" src="https://raw.githubusercontent.com/pengkunbin/mt-project/master/gitimg/footer.png"><br>
 
 注册页面展示<br>
