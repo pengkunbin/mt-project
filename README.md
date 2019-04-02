@@ -2,13 +2,13 @@
 ===
 首页展示
 <br>
-<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/header.png">
-<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/index1.png">
-<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/index2.png">
-<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/footer.png">
+<img  width="600" height="300" src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/header.png">
+<img  width="600" height="300" src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/index1.png">
+<img  width="600" height="300" src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/index2.png">
+<img  width="600" height="300" src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/footer.png">
 
 注册页面展示
-<img  src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/register.png">
+<img  width="600" height="300" src="https://github.com/pengkunbin/mt-project/tree/master/gitimg/register.png">
 
 
 ## Build Setup
